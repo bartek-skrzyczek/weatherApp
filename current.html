@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="css/reboot.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="weather-icons-master/css/weather-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&language=en"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <div>
+      <div class="wrapper-weather-card" id="cityDiv">
+        <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" autocomplete="off" data-country="PL">
+        <button class="close-icon" type="reset"></button>
+        <button id="submitCity" class="btn btn-primary">Search City</button>
+        <button>Show local weather</button>
+
+        <div id="showWeather"></div>
+        <div class="row" style="margin-top:30px">
+            <div class="table table-bordered">
+               <div id="header"  class="text-center"></div>
+               <span>Check weather every 3 hours:</span>
+                <div id="forecastWeather">
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="weather.js"></script>
+<script src="jquery.city-autocomplete.js" type="text/javascript"></script>
+<script>
+$('input#city').cityAutocomplete();
+</script>
+<script src="getCurrentTime.js" type="text/javascript"></script>
+</body>
+</html>
