@@ -6,7 +6,7 @@ $(document).ready(function(){
     var city = defaultCity;
 
     $.ajax({
-       url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
+       url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
         type: "GET",
         dataType: "jsonp",
         success: function(data){
@@ -15,7 +15,7 @@ $(document).ready(function(){
       }
     });
     $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
         type: "GET",
         dataType: "jsonp",
         success: function(data){
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
                 div += "<div>";
 
-                div += "<td><img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'></td>";
+                div += "<td><img src='https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'></td>";
                 div += "<td>" + data.list[i].weather[0].main + "</td>";
                 div += "<td>" + data.list[i].weather[0].description + "</td>";
                 div += "<td>" + data.list[i].main.temp + "</td>";
@@ -60,7 +60,7 @@ function getWeather(){
     if(city != ''){
 
         $.ajax({
-           url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
+           url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
             type: "GET",
             dataType: "jsonp",
             success: function(data){
@@ -155,7 +155,7 @@ function getForecast(){
     if(city != ''){
 
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
+            url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&appid=9dba112118cf4676909c78c0a170e22e",
             type: "GET",
             dataType: "jsonp",
             success: function(data){
@@ -165,7 +165,7 @@ function getForecast(){
                   console.log(data.list.length);
                     table += "<tr>";
 
-                    table += "<td><img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'></td>";
+                    table += "<td><img src='https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'></td>";
                     table += "<td>" + data.list[i].weather[0].main + "</td>";
                     table += "<td>" + data.list[i].weather[0].description + "</td>";
                     table += "<td>" + data.list.main.temp + "</td>";
