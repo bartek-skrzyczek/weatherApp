@@ -135,7 +135,7 @@ function showResults(data){
           "<div class='row'>" +
           "<div class='col data-current-main'>" +
           "<h3>" + data.weather[0].main+"</h3>" + weatherIcon +
-          "<h3><img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description+"</h3>"+
+          "<h3><img src='https://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description+"</h3>"+
           "<span>" + "<span id='temperature-value'>" + data.main.temp + "</span>" + "<span id='celsius-value' class='active'>" + " &deg;C" + "</span>" +  " |" + "<span id='kelvin-value'>" + " K" + "</span>" + "</span>" +
           "</div>" +
           "<ul class='col data-current-details'>" +
